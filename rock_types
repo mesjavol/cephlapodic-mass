@@ -1,0 +1,15 @@
+rock_types = {
+    "igneous": "formed from the solidification of magma or lava",
+    "sedimentary": "formed from layers of sediment such as sand, silt, and clay",
+    "metamorphic": "formed from the alteration of existing rock through heat, pressure, and chemical processes"
+}
+
+def get_rock_info(rock_type):
+    if rock_type in rock_types:
+        return rock_types[rock_type]
+    else:
+        return "Rock type not found in database."
+
+rock = input("Enter rock type: ")
+info = get_rock_info(rock.lower())
+print(info)
